@@ -1,4 +1,3 @@
-
 ;;; This file bootstraps the configuration, which is divided into
 ;;; a number of other files.
 
@@ -114,6 +113,7 @@
 
 (require 'init-dash)
 (require 'init-ledger)
+(require 'init-fill-column-indicator)
 ;; Extra packages which don't require any configuration
 
 (require-package 'gnuplot)
