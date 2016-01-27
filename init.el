@@ -115,6 +115,7 @@
 (require 'init-ledger)
 (require 'init-fill-column-indicator)
 (require 'init-docker-mode)
+(require 'init-w3m)
 
 ;; Extra packages which don't require any configuration
 
