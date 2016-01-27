@@ -114,6 +114,8 @@
 (require 'init-dash)
 (require 'init-ledger)
 (require 'init-fill-column-indicator)
+(require 'init-docker-mode)
+
 ;; Extra packages which don't require any configuration
 
 (require-package 'gnuplot)
