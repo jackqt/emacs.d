@@ -116,6 +116,7 @@
 (require 'init-fill-column-indicator)
 (require 'init-docker-mode)
 (require 'init-w3m)
+(require 'init-org2blog)
 
 ;; Extra packages which don't require any configuration
 
