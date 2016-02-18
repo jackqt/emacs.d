@@ -123,3 +123,13 @@
 (global-set-key [(control return)] 'semantic-ia-complete-symbol-menu)
 (global-set-key [M-g] 'goto-line)
 ;;=========================================END==============================================;
+
+(setq org2blog/wp-blog-alist
+      '(("blog-name"
+         :url "http://blog.inotelife.com/xmlrpc.php"
+         :username "infadmin"
+         :default-title "Untitle Article"
+         :default-categories ("org2blog" "emacs")
+         :tags-as-categories nil)))
+
+;;=========================================END==============================================;
