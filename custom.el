@@ -111,40 +111,15 @@
 (global-set-key [f1] 'eshell)							   ; 进入shell
 (global-set-key [f2] 'calendar)
 (global-set-key [f10] 'speedbar)						  ; 启动/关闭speedbar
-(global-set-key (kbd "C-;") 'comment-or-uncomment-region)	  ; 注释 / 取消注释
-(global-set-key (kbd "C-f") 'c-indent-line-or-region)			; 格式化代码
 
+(global-set-key (kbd "C-;") 'comment-or-uncomment-region) ; 注释 / 取消注释
 (global-set-key [C-tab] 'other-window)					  ; 切换窗口
 (global-set-key [M-return] 'delete-other-windows)		  ; 关闭其他窗口
 (global-set-key "\C-xk" 'kill-this-buffer)				  ; 关闭当前buffer
-(global-set-key (kbd "S-<SPC>") 'set-mark-command) ;用shift+space 来 setmark 了, C-@ 很不好按。
+(global-set-key (kbd "S-<SPC>") 'set-mark-command)        ;用shift+space 来 setmark 了, C-@ 很不好按。
 
 (global-set-key [M-/] 'hippie-expand) ; 补全命令 右Ctrl+\ 自动补全menu
 
 (global-set-key [(control return)] 'semantic-ia-complete-symbol-menu)
 (global-set-key [M-g] 'goto-line)
 ;;=========================================END==============================================;
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(custom-enabled-themes (quote (sanityinc-solarized-light)))
- '(custom-safe-themes
-   (quote
-    ("4cf3221feff536e2b3385209e9b9dc4c2e0818a69a1cdb4b522756bcdf4e00a4" default)))
- '(safe-local-variable-values
-   (quote
-    ((no-byte-compile t)
-     (ruby-compilation-executable . "ruby")
-     (ruby-compilation-executable . "ruby1.8")
-     (ruby-compilation-executable . "ruby1.9")
-     (ruby-compilation-executable . "rbx")
-     (ruby-compilation-executable . "jruby"))))
- '(session-use-package t nil (session)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
