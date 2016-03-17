@@ -117,6 +117,7 @@
 (require 'init-docker-mode)
 (require 'init-w3m)
 (require 'init-org2blog)
+(require 'init-emmet-mode)
 
 ;; Extra packages which don't require any configuration
 
@@ -168,3 +169,4 @@
 ;; coding: utf-8
 ;; no-byte-compile: t
 ;; End:
+(put 'dired-find-alternate-file 'disabled nil)
