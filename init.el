@@ -100,14 +100,13 @@
 
 (require 'init-paredit)
 (require 'init-lisp)
-(require 'init-slime)
-(unless (version<= emacs-version "24.2")
-  (require 'init-clojure)
-  (require 'init-clojure-cider))
+;;(unless (version<= emacs-version "24.2")
+;;(require 'init-clojure)
+;;(require 'init-clojure-cider))
 (require 'init-common-lisp)
 
 (when *spell-check-support-enabled*
-  (require 'init-spelling))
+    (require 'init-spelling))
 
 (require 'init-misc)
 
@@ -118,6 +117,7 @@
 (require 'init-w3m)
 (require 'init-org2blog)
 (require 'init-emmet-mode)
+(require 'init-multi-term)
 
 ;; Extra packages which don't require any configuration
 

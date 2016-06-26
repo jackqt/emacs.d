@@ -3,6 +3,11 @@
 ;;; code:
 (setq default-directory "~/")	  ; 设置打开文件的缺省路径
 
+;; Personal Info
+(setq user-full-name "LiQingTian")
+(setq user-mail-address "jack.qingtian@outlook.com")	  ; 设置有用的个人信息,这在很多地方有用。
+
+;; Language Setting
 (set-language-environment 'Chinese-GB)
 (set-keyboard-coding-system 'utf-8)
 (set-clipboard-coding-system 'utf-8)
@@ -18,7 +23,6 @@
 ;;MY CUSTOMIZE
 (global-linum-mode 1)
 (setq column-number-mode t)             ;显示列号
-(auto-image-file-mode t);打开图片显示功能
 (display-time-mode 1);显示时间，格式如下
 (setq display-time-day-and-date t)
 (transient-mark-mode t);允许临时设置标记
@@ -27,12 +31,8 @@
 (setq mouse-yank-at-point t)	;不在鼠标点击的那个地方插入剪贴板内容
 (setq kill-ring-max 200)	; 设置粘贴缓冲条目数量
 (setq x-select-enable-clipboard t) ; 允许emacs和外部其他程序的粘贴
-(setq user-full-name "LiQingTian")
-(setq user-mail-address "jack.qingtian@outlook.com")	  ; 设置有用的个人信息,这在很多地方有用。
 (setq global-font-lock-mode t)	  ;进行语法加亮。
 (setq mouse-avoidance-mode 'animate) ;光标靠近鼠标指针时，让鼠标指针自动让开，别挡住视线。
-(setq auto-image-file-mode t) ;让 Emacs 可以直接打开和显示图片
-(setq-default auto-fill-function 'do-auto-fill) ;Autofill in all modes;;
 (setq make-backup-files nil) ;不产生备份文件
 (display-time) ; 显示时间
 (setq sentence-end "\\([。！？]\\|……\\|[.?!][]\"')}]*\\($\\|[ \t]\\)\\)[ \t\n]*")
@@ -40,21 +40,7 @@
 (setq enable-recursive-minibuffers t)	  ; 可以递归的使用 minibuffer
 (setq scroll-margin 3 scroll-conservatively 10000) ;防止页面滚动时跳动， scroll-margin 3 可以在靠近屏幕边沿3行时就开始滚动，可以很好的看到上下文
 
-;;(setq display-time-24hr-format t)
-;;(setq fill-column 120);默认显示 80列就换行
-;;(set-scroll-bar-mode nil) ; 取消滚动栏
-;;(tool-bar-mode nil)		   ; 取消工具栏
-;;(setq auto-save-mode nil)	 ; 自动保存模式
-;;(setq speedbar-use-images nil);;不使用 image 的方式
-;;(setq speedbar-verbosity-level 0)
-;;(setq time-stamp-active t)
-;;(setq time-stamp-warn-inactive t)
-;;(setq time-stamp-format "%:y-%02m-%02d %3a %02H:%02M:%02S") ; 设置时间戳，标识出最后一次保存文件的时间。
-;;(setq dired-recursive-copies 'top)
-;;(setq dired-recursive-deletes 'top)     ;让 dired 可以递归的拷贝和删除目录。
-
 ;; 设置tab宽度
-;;(setq-default tab-stop-list '(4 6 8 10 12 14 16 18 20 22 24 26 28 30 32 34 36 38 40 42 44 46 48 50 52 54 56 58 60 62 64 66 68 70 72 74 76 78 80))
 (setq-default tab-width 4)
 (setq tab-width 4)
 ;; 将tab替换为空格
