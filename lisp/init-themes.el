@@ -1,3 +1,6 @@
+;;; package --- Summar
+;;; Commentary:
+;;; Code:
 (when (< emacs-major-version 24)
   (require-package 'color-theme))
 
@@ -8,7 +11,7 @@
 ;; Old-style color theming support (via color-theme.el)
 ;;------------------------------------------------------------------------------
 (defcustom window-system-color-theme 'color-theme-sanityinc-tomorrow-bright
-  "Color theme to use in window-system frames.
+  "Color theme to use in \"window-system\" frames.
 If Emacs' native theme support is available, this setting is
 ignored: use `custom-enabled-themes' instead."
   :type 'symbol)
@@ -45,9 +48,9 @@ ignored: use `custom-enabled-themes' instead."
 ;;------------------------------------------------------------------------------
 
 ;; If you don't customize it, this is the theme you get.
-(setq-default custom-enabled-themes '(sanityinc-solarized-light))
+(setq-default custom-enabled-themes '(sanityinc-solarized-dark))
 
-;; Ensure that themes will be applied even if they have not been customized
+;; that themes will be applied even if they have not been customized
 (defun reapply-themes ()
   "Forcibly load the themes listed in `custom-enabled-themes'."
   (dolist (theme custom-enabled-themes)
@@ -73,3 +76,4 @@ ignored: use `custom-enabled-themes' instead."
 
 
 (provide 'init-themes)
+;;; init-themes.el ends here
