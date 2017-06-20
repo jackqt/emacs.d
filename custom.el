@@ -30,7 +30,7 @@
 (setq inhibit-startup-message t) ; 关闭emacs启动时的画面
 (setq mouse-yank-at-point t)	;不在鼠标点击的那个地方插入剪贴板内容
 (setq kill-ring-max 200)	; 设置粘贴缓冲条目数量
-(setq x-select-enable-clipboard t) ; 允许emacs和外部其他程序的粘贴
+(setq select-enable-clipboard t) ; 允许emacs和外部其他程序的粘贴
 (setq global-font-lock-mode t)	  ;进行语法加亮。
 (setq mouse-avoidance-mode 'animate) ;光标靠近鼠标指针时，让鼠标指针自动让开，别挡住视线。
 (setq make-backup-files nil) ;不产生备份文件
@@ -47,8 +47,8 @@
 (setq-default indent-tabs-mode nil)
 (setq indent-tabs-mode nil)
 
-;=========================================END==============================================;
-;=========================================START C====================================;
+;;=========================================END==============================================;
+;;=========================================START C====================================;
 ;; c-mode设置
 ;; c-mode公共设置
 (defun my-c-mode-common-hook ()
@@ -73,32 +73,28 @@
 
 ;; C语言设置
 (defun my-c-mode-hook ()
-(c-set-style "cc-mode"))
+  (c-set-style "cc-mode"))
 (add-hook 'c-mode-hook 'my-c-mode-hook)
 
 ;; C++设置
 (defun my-c++-mode-hook ()
-(c-set-style "stroustrup"))
+  (c-set-style "stroustrup"))
 (add-hook 'c++-mode-hook 'my-c++-mode-hook)
 
 ;;=========================================END==============================================;
+(global-set-key [f1] 'eshell)
+(global-set-key [f2] 'speedbar)
+(global-set-key [f10] 'calendar)
 
-;;HOT KEY
-;;保留F3、F4、F5、F6、F7、F8 for Xrefactory
-(global-set-key [f1] 'eshell)							   ; 进入shell
-(global-set-key [f2] 'calendar)
-(global-set-key [f10] 'speedbar)						  ; 启动/关闭speedbar
 
-(global-set-key (kbd "C-;") 'comment-or-uncomment-region) ; 注释 / 取消注释
-(global-set-key [C-tab] 'other-window)					  ; 切换窗口
-(global-set-key [M-return] 'delete-other-windows)		  ; 关闭其他窗口
-(global-set-key "\C-xk" 'kill-this-buffer)				  ; 关闭当前buffer
-(global-set-key (kbd "S-<SPC>") 'set-mark-command)        ;用shift+space 来 setmark 了, C-@ 很不好按。
-
+(global-set-key [M-return] 'delete-other-windows)
+(global-set-key [?\S- ] 'set-mark-command)
 (global-set-key [M-/] 'hippie-expand) ; 补全命令 右Ctrl+\ 自动补全menu
-
 (global-set-key [(control return)] 'semantic-ia-complete-symbol-menu)
-(global-set-key [M-g] 'goto-line)
+;;(global-set-key [M-g] 'goto-line)
+;;(global-set-key (kbd "C-;") 'comment-or-uncomment-region) ; 注释 / 取消注释
+;;(global-set-key [C-tab] 'other-window)					  ; 切换窗口
+;;(global-set-key "\C-xk" 'kill-this-buffer)
 ;;=========================================END==============================================;
 
 (setq org2blog/wp-blog-alist
@@ -110,14 +106,15 @@
          :tags-as-categories nil)))
 ;;=========================================END==============================================;
 
-(setq org-agenda-files (list "/Volumes/Data/Dropbox/Org/Agenda/work.org"
-                             "/Volumes/Data/Dropbox/Org/Agenda/personal.org"
-                             "/Volumes/Data/Dropbox/Org/Agenda/architecture.org"))
+(setq org-agenda-files (list "/Users/jack/Dropbox/Org/Agenda/work.org"
+                             "/Users/jack/Dropbox/Org/Agenda/personal.org"
+                             "/Users/jack/Dropbox/Org/Agenda/architecture.org"))
 ;;=========================================END==============================================;
 
 (setq ditaa-cmd "java -jar ~/.emacs.d/plugins/ditaa/ditaa0_9.jar")
 
 (defun ditaa-generate ()
+  "Use ditta.jar to generate the source file."
   (interactive)
   (shell-command
    (concat ditaa-cmd " " buffer-file-name)))
