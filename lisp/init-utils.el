@@ -85,5 +85,10 @@
         (error "Cannot open tramp file")
       (browse-url (concat "file://" file-name)))))
 
+(defun eshell/clear ()
+  "Clear the eshell buffer."
+  (let ((inhibit-read-only t))
+    (erase-buffer)
+    (eshell-send-input)))
 
 (provide 'init-utils)
